@@ -19,4 +19,3 @@ Content-Type: application/json
   "name": "john doe"
 }
 ```
-

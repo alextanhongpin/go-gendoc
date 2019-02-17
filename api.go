@@ -10,7 +10,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/policypalnet/go-test/model"
+	"github.com/policypalnet/go-test/service/namesvc"
 )
 
 const (
@@ -36,7 +36,7 @@ func RenderMarkdown(writer io.Writer, t Template) {
 
 func main() {
 	t := Template{}
-	t["GetNameRequest"] = model.GetNameRequest{"john doe"}
+	t["GetNameRequest"] = namesvc.GetNameRequest{"john doe"}
 	f, err := os.Create(DEST)
 	if err != nil {
 		log.Fatal(err)
